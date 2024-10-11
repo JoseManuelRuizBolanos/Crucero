@@ -1,0 +1,76 @@
+[
+    {
+        "name" : "Requisitos de embarque",
+        "item" : [
+            {
+                "name" : "¿Cuáles son los requisitos de exámenes de detección previos al crucero?",
+                "item" : [
+                    {
+                        "name" : ""
+                    }
+                ]
+            },
+            {
+                "name" : "¿Qué vacunas se requieren para viajar en un crucero?",
+                "item" : [
+                    {
+                        "name" : ""
+                    }
+                ]
+            },
+            {
+                "name" : "¿Qué documentación de viaje necesito para embarcar?",
+                "item" : [
+                    {
+                        "name" : ""
+                    }
+                ]
+            },
+            {
+                "name" : "¿Qué es lo más importante que hay que saber después de reservar un crucero?",
+                "item" : [
+                    {
+                        "name" : ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "Check-In",
+        "item" : [
+            {
+                "name" : "¿Por qué no está disponible el check-in para mi crucero?",
+                "item" : [
+                    {
+                        "name" : ""
+                    }
+                ]
+            },
+            {
+                "name" : "¿Cuando puedo hacer el check-in para mi crucero?",
+                "item" : [
+                    {
+                        "name" : ""
+                    }
+                ]
+            },
+            {
+                "name" : "¿Qué documentación necesito para hacer el check-in?",
+                "item" : [
+                    {
+                        "name" : ""
+                    }
+                ]
+            },
+            {
+                "name" : "¿Dónde puedo encontrar los documentos de mi reserva de crucero?",
+                "item" : [
+                    {
+                        "name" : ""
+                    }
+                ]
+            }
+        ]
+    }
+]

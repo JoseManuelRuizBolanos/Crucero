@@ -1,0 +1,240 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button [routerLink]="['/pagina-principal']">
+        <ion-label>Pagina Principal</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/preguntas-frecuentes']">
+        <ion-label>Preguntas frecuentes</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/guias-cruceros']">
+        <ion-label>Guías de Cruceros</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/main']">
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Pagina Principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <h1 class="titulo">Descubre los mejores barcos</h1>
+    <ion-searchbar show-clear-button="focus"></ion-searchbar>
+    <ion-card [routerLink]="['/adventure-of-the-seas']">
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/oasis/oasis-of-the-seas-labadee-haiti-aft.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Adventure of the Seas</ion-card-title>
+        <ion-card-subtitle>Una manera más audaz de realizar una escapada</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/allure-of-the-seas']">
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/allure/allure-of-the-seas-naples-italy.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Allure of the Seas</ion-card-title>
+        <ion-card-subtitle>Espectáculos y éxitos</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/anthem-of-the-seas']">
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/ship/anthem-of-the-seas/image/anthem-of-the-seas-aerial-stern-sailing.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Anthem of the Seas</ion-card-title>
+        <ion-card-subtitle>Eleva el nivel más allá</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/brilliance-of-the-seas']">
+      <img src="https://www.cruiseswithfriends.com/images/opengraph/royal-caribbean-brilliance-of-the-seas.png"/>
+      <ion-card-header>
+        <ion-card-title>Brilliance of the Seas</ion-card-title>
+        <ion-card-subtitle>Enciende tu espíritu viajero</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/enchantment-of-the-seas']">
+      <img src="https://www.ship-technology.com/wp-content/uploads/sites/8/2017/10/enchant3.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Enchantment of the Seas</ion-card-title>
+        <ion-card-subtitle>Mejora tu escapada</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/explorer-of-the-seas']">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Explorer_of_the_Seas%2C_Fremantle%2C_2015_%2803%29.JPG"/>
+      <ion-card-header>
+        <ion-card-title>Explorer of the Seas</ion-card-title>
+        <ion-card-subtitle>Todo en la isla</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/freedom-of-the-seas']">
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/freedom/freedom-of-the-seas-drone-aerial-aft.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Freedom of the Seas</ion-card-title>
+        <ion-card-subtitle>Aventura asombrosa</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/grandeur/grandeur-of-the-seas-sailing.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Grandeur of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Una escapada diferente</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Harmony_of_the_Seas_%28ship%2C_2016%29_001.jpg/640px-Harmony_of_the_Seas_%28ship%2C_2016%29_001.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Harmony of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Apúnta a la aventura de navegar en familia</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/icon-of-the-seas']">
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/icon/assets/icon-of-the-seas-hero-cruises-vacaion-reveal-sunset-night.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Icon of the Seas</ion-card-title>
+        <ion-card-subtitle>Conoce a the Icon of Vacations</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/INDEPENDENCE_OF_THE_SEAS_%2843623180144%29.jpg/1200px-INDEPENDENCE_OF_THE_SEAS_%2843623180144%29.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Independence of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Una experiencia audaz</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/ship/jewel-of-the-seas/jewel-of-the-seas-grenada-docked-harbor.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Jewel of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Profundiza en nuevos descubrimientos</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://www.yatravet.es/wp-content/uploads/2024/02/Liberty-of-the-Seas-1.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Liberty of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Rompe el hielo</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/content/ship/mariner-of-the-seas/overview/hero-pic/mariner-MA-night-lights.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Mariner of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Aventuras audaces en el horizonte</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://www.cruisemapper.com/images/ships/704-large-f64eac11f2cd8f0efa196f8ad173178e.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Navigator of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Aventuras en la costa oeste</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/oasis-of-the-seas']">
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/oasis/oasis-of-the-seas-amplified-aerial.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Oasis of the Seas</ion-card-title>
+        <ion-card-subtitle>Más grande. Más impresionante. Innovador</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/odyssey-of-the-seas']">
+      <img src="https://www.cruisemapper.com/images/ships/1862-6403cb2e42c.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Odyssey of the Seas</ion-card-title>
+        <ion-card-subtitle>Recorre el mundo con audacia</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://d23n7ahjfnjotp.cloudfront.net/imgs/mobileheader/ship_533_1280x960-rci_ov-aerialsnyatsea067_640x260_mobhdr.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Ovation of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Más grande. Más impresionante. Rumbo a baja</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Quantum_of_the_Seas_-_Wedel_04.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Quantum of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Una nueva frontera favorita</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://www.royalcaribbeanpresscenter.com/digital_pk_assets/17/hero_images/RCI-Radiance-CPM-Header_1590507440.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Radiance of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Paseo por la naturaleza</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/rhapsody/assets/rhapsody-of-the-seas-alaska-sailing-hero.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Rhapsody of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Tu boleto a aventuras exóticas</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/serenade/serenade-of-the-seas-alaska-landscape-aerial.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Serenade of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Aventuras de costa a costa</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/SPECTRUM_OF_THE_SEAS_20190608-2_%28cropped%29.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Spectrum of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>El primer crucero de la clase quantum ultra</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/star-of-the-seas']">
+      <img src="https://www.royalcaribbeanpresscenter.com/digital_pk_assets/44/hero_images/23-RCC-ST-DPK-Header-10223_1696512894.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Star of the Seas</ion-card-title>
+        <ion-card-subtitle>The next Icon</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/symphony-of-the-seas']">
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/symphony/symphony-of-the-seas-new-york-sailing-city-skyline.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Symphony of the Seas</ion-card-title>
+        <ion-card-subtitle>Aventura revolucionaria</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/utopia-of-the-seas']">
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/utopia/utopia-of-thee-seas-night-aerial-aft-sea-day.jpg?$1440x600$"/>
+      <ion-card-header>
+        <ion-card-title>Utopia of the Seas</ion-card-title>
+        <ion-card-subtitle>The World's Biggest Weekend</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://www.cruisemapper.com/images/ships/612-large-f76a89f0cb91bc419542ce9fa43902dc.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Vision of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Lánzate a la aventura para ver el mundo con otros ojos</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card [routerLink]="['/voyager-of-the-seas']">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Voyager_of_the_Seas_in_Sydney.jpg"/>
+      <ion-card-header>
+        <ion-card-title>Voyager of the Seas</ion-card-title>
+        <ion-card-subtitle>Esto es una aventura intensa</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/wonder/wonder-of-the-seas-sunset-aerial.jpg?$960x320$"/>
+      <ion-card-header>
+        <ion-card-title>Wonder of the Seas (Acabar)</ion-card-title>
+        <ion-card-subtitle>Las mejores vacaciones familiares en Orlando</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </ion-content>
+</div>

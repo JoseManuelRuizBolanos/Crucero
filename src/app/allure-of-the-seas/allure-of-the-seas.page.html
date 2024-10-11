@@ -1,0 +1,53 @@
+<ion-menu contentId="allure-menu" slot="start">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button [routerLink]="['/pagina-principal']">
+        <ion-label>Pagina Principal</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/preguntas-frecuentes']">
+        <ion-label>Preguntas frecuentes</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/guias-cruceros']">
+        <ion-label>Guías de Cruceros</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/main']">
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="allure-menu">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Allure of the Seas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="descripcion">
+        <ion-icon name="book"></ion-icon>
+        Descripcion
+      </ion-tab-button>
+      <ion-tab-button tab="quehacer">
+        <ion-icon name="walk"></ion-icon>
+        Que hacer
+      </ion-tab-button>
+      <ion-tab-button tab="camarotes">
+        <ion-icon name="bed"></ion-icon>
+        Camarotes
+      </ion-tab-button>
+      <ion-tab-button tab="reservar">
+        <ion-icon name="boat"></ion-icon>
+        Reservar
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</div>

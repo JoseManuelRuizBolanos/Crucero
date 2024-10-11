@@ -1,0 +1,7 @@
+{
+  "name": "Crucero",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
