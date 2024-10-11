@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, Validators, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
+import { AuthenticationService } from '../authentication.service';
 
 
 @Component({
@@ -10,12 +12,38 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink, IonicModule]
+  imports: [CommonModule, FormsModule, RouterLink, IonicModule, ReactiveFormsModule]
 })
-export class LoginPage  {
+export class LoginPage implements OnInit{
+  loginForm : FormGroup
 
-  constructor() {  }
+  constructor(public formBuilder:FormBuilder, public loadingController: LoadingController, public authService: AuthenticationService) {  }
 
+  ngOnInit(){
+    this.loginForm = this.formBuilder.group({
+        email: ['', [
+          Validators.required,
+          Validators.email,
+          Validators.pattern("[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$")
+        ]],
+        password: ['', [
+          Validators.required,
+          Validators.pattern("(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}")
+        ]]
+    })
+ }
+
+ get errorControl(){
+  return this.loginForm.controls;
+ }
+
+ async signUp(){
+  const loading = await this.loadingController.create();
+  await loading.present();
+  if(this.loginForm?.valid){
+    //const user = await this.authService.registerUser(email, password)
+  }
+ }
   
 
 }

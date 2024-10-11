@@ -14,11 +14,11 @@ import { AuthenticationService } from '../authentication.service';
   imports: [CommonModule, FormsModule, RouterLink, IonicModule, ReactiveFormsModule]
 })
 export class CrearCuentaPage implements OnInit {
-  ionicForm: FormGroup;
+  regForm: FormGroup;
 
   constructor(public formBuilder:FormBuilder, public loadingController: LoadingController, public authService: AuthenticationService) { }
     ngOnInit(){
-      this.ionicForm = this.formBuilder.group({
+      this.regForm = this.formBuilder.group({
           fullname: ['', [Validators.required]],
           email: ['', [
             Validators.required,
@@ -33,13 +33,13 @@ export class CrearCuentaPage implements OnInit {
    }
 
    get errorControl(){
-    return this.ionicForm.controls;
+    return this.regForm.controls;
    }
 
    async signUp(){
     const loading = await this.loadingController.create();
     await loading.present();
-    if(this.ionicForm?.valid){
+    if(this.regForm?.valid){
       //const user = await this.authService.registerUser(email, password)
     }
    }
