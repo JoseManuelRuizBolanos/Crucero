@@ -3,11 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Router, RouterLink } from '@angular/router';
-import { map } from 'rxjs';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
-import { bootstrapAppScopedEarlyEventContract } from '@angular/core/primitives/event-dispatch';
-import { AppComponent } from '../app.component';
-import { bootstrapApplication } from '@angular/platform-browser';
+import { AuthenticationService } from '../authentication.service';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-pagina-principal',
@@ -17,6 +14,29 @@ import { bootstrapApplication } from '@angular/platform-browser';
   imports: [CommonModule, FormsModule, RouterLink, IonicModule ]
 })
 export class PaginaPrincipalPage {
+  searchTerm: string='';
+  user: any
+  constructor(public authService:AuthenticationService, public router: Router, public menu: MenuController) { 
+    this.user = authService.getProfile()
+    this.menuActive();
+  }
 
-  constructor( ) { }
+  menuActive(){
+    this.menu.enable(true, 'menu');
+  }
+
+  handleInput(event: any){
+    this.searchTerm = event.target.value;
+    this.getSearchData();
+  }
+
+  getSearchData(){
+    console.log('Searching for:', this.searchTerm);
+  }
+
+  async logout(){
+    this.authService.signOut().then(() => {
+      this.router.navigate(['/login'])
+    })
+  }
 }

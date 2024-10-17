@@ -1,26 +1,3 @@
-<ion-menu contentId="main-content">
-  <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title>Menu Content</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item button [routerLink]="['/pagina-principal']">
-        <ion-label>Pagina Principal</ion-label>
-      </ion-item>
-      <ion-item button [routerLink]="['/preguntas-frecuentes']">
-        <ion-label>Preguntas frecuentes</ion-label>
-      </ion-item>
-      <ion-item button [routerLink]="['/guias-cruceros']">
-        <ion-label>Guías de Cruceros</ion-label>
-      </ion-item>
-      <ion-item button [routerLink]="['/main']">
-        <ion-label>Cerrar Sesión</ion-label>
-      </ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
 <div class="ion-page" id="main-content">
   <ion-header>
     <ion-toolbar color="primary">
@@ -31,105 +8,38 @@
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-accordion-group>
-      <ion-accordion>
-        <ion-item slot="header">
-          <ion-label color="primary">Requisitos de embarque</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">¿Cuáles son los requisitos de exámenes de detección previos al crucero?</div>
-        <div class="ion-padding" slot="content">¿Qué vacunas se requieren para viajar en un crucero?</div>
-        <div class="ion-padding" slot="content">¿Qué documentación de viaje necesito para embarcar?</div>
-        <div class="ion-padding" slot="content">¿Qué es lo más importante que hay que saber después de reservar un crucero?</div>
-      </ion-accordion>
-      <ion-accordion>
-        <ion-item slot="header">
-          <ion-label color="primary">Check-In</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">¿Por qué no está disponible el check-in para mi crucero?</div>
-        <div class="ion-padding" slot="content">¿Cuándo puedo hacer el check-in para mi crucero?</div>
-        <div class="ion-padding" slot="content">¿Qué documentación necesito para hacer el check-in?</div>
-        <div class="ion-padding" slot="content">¿Dónde puedo encontrar los documentos de mi reserva de crucero?</div>
-      </ion-accordion>
-      <ion-accordion>
-        <ion-item slot="header">
-          <ion-label color="primary">Programa de cambio a categoría superior RoyalUp</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">¿Puedo beneficiarme del programa de cambios a categoría superior?</div>
-        <div class="ion-padding" slot="content">¿El monto de la oferta es por persona y por día, o por toda la duración del crucero?</div>
-        <div class="ion-padding" slot="content">¿Cómo funcionan las ofertas de RoyalUp si soy parte de un grupo o viajo con otra reserva?</div>
-        <div class="ion-padding" slot="content">¿Puedo rechazar el cambio a categoría superior una vez aceptado?</div>
-      </ion-accordion>
-      <ion-accordion>
-        <ion-item slot="header">
-          <ion-label color="primary">Políticas de cancelaciones y pagos</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">Si no estoy listo para reservar, ¿puedo guardar un itinerario o una navegación y volver más tarde?</div>
-        <div class="ion-padding" slot="content">¿A qué tipo de reembolso tengo derecho si cancelo mi reserva de crucero?</div>
-        <div class="ion-padding" slot="content">¿Cuándo vence el pago final de mis vacaciones en crucero?</div>
-        <div class="ion-padding" slot="content">¿Qué está incluido en el precio del billete de crucero de Royal Caribbean?</div>
-      </ion-accordion>
-      <ion-accordion>
-        <ion-item slot="header">
-          <ion-label color="primary">Crown and Anchor Society</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">¿Cómo me inscribo?</div>
-        <div class="ion-padding" slot="content">¿Qué son los puntos de crucero del programa?</div>
-        <div class="ion-padding" slot="content">¿Por qué no aparecen mis cruceros anteriores después de iniciar sesión en mi cuenta?</div>
-        <div class="ion-padding" slot="content">¿Cuáles son los beneficios del programa de fidelización?</div>
-      </ion-accordion>
-      <ion-accordion>
-        <ion-item slot="header">
-          <ion-label color="primary">Perfect Day at CocoCay</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">¿Qué es Perfect Day at CodoCay?</div>
-        <div class="ion-padding" slot="content">¿Cómo puedo encontrar los cruceros e itinerarios que visitan Perfect Day at CocoCay?</div>
-        <div class="ion-padding" slot="content">¿Puedo pasar la noche en Perfect Day at CocoCay?</div>
-        <div class="ion-padding" slot="content">¿Cómo es el ingreso al parque acuático?</div>
-      </ion-accordion>
-      <ion-accordion>
-        <ion-item slot="header">
-          <ion-label color="primary">Equipaje y código de vestimenta</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">¿Qué debería incluir en mi equipaje para mis viajes en crucero?</div>
-        <div class="ion-padding" slot="content">¿Como obtengo las etiquetas para el equipaje?</div>
-        <div class="ion-padding" slot="content">¿Cuál es mi código de vestimenta?</div>
-        <div class="ion-padding" slot="content">¿Cuánto equipaje puedo llevar a bordo?</div>
-      </ion-accordion>
-      <ion-accordion>
-        <ion-item slot="header">
-          <ion-label color="primary">Paquetes de bebidas</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">¿Qué es un paquete de bebidas?</div>
-        <div class="ion-padding" slot="content">¿Qué debo hacer para comprar mi paquete de bebidas?</div>
-        <div class="ion-padding" slot="content">¿Puedo pedir varias bebidas al mismo tiempo con los paquetes de bebidas todo incluido?</div>
-        <div class="ion-padding" slot="content">¿Las propinas están incluidas en el coste de los paquetes de bebidas?</div>
-      </ion-accordion>
-      <ion-accordion>
-        <ion-item slot="header">
-          <ion-label color="primary">Embarque y transporte</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">¿Royal Caribbean ofrece servicios de transporte o autobuses para el traslado desde y hasta el aeropuerto?</div>
-        <div class="ion-padding" slot="content">¿Qué opciones de transporte están disponibles para llegar a la terminal?</div>
-        <div class="ion-padding" slot="content">¿Puedo unirme a un crucero una vez ha empezado o salir antes de que acabe?</div>
-        <div class="ion-padding" slot="content">¿Qué sucede si pierdo el embarque debido a retrasos en el viaje?</div>
-      </ion-accordion>
-      <ion-accordion>
-        <ion-item slot="header">
-          <ion-label color="primary">Internet a bordo</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">¿Qué opciones de internet hay disponibles a bordo?</div>
-        <div class="ion-padding" slot="content">¿Qué es VOOM y cuánto cuesta?</div>
-        <div class="ion-padding" slot="content">¿Qué velocidad tiene el servicio de internet?</div>
-      </ion-accordion>
-      <ion-accordion>
-        <ion-item slot="header">
-          <ion-label color="primary">Indicaciones y ubicación de la terminal</ion-label>
-        </ion-item>
-        <div class="ion-padding" slot="content">¿Hay plazas de estacionamiento disponibles en la terminal de cruceros?</div>
-        <div class="ion-padding" slot="content">¿Dónde se encuentra el puerto de Miami?</div>
-        <div class="ion-padding" slot="content">¿Dónde se encuentra el puerto Everglades?</div>
-        <div class="ion-padding" slot="content">¿Dónde se encuentra el puerto de Galveston?</div>
-      </ion-accordion>
-    </ion-accordion-group>
+    <ion-item color="primary" class="titulo" [routerLink]="['/preguntas1']">
+      <ion-title>Requisitos de embarque</ion-title>
+    </ion-item>
+    <ion-item color="primary" class="titulo" [routerLink]="['/preguntas2']">
+      <ion-title>Check-In</ion-title>
+    </ion-item>
+    <ion-item color="primary" class="titulo" [routerLink]="['/preguntas3']">
+      <ion-title>RoyalUp</ion-title>
+    </ion-item>
+    <ion-item color="primary" class="titulo" [routerLink]="['/preguntas4']">
+      <ion-title>Políticas de cancelaciones y pagos</ion-title>
+    </ion-item>
+    <ion-item color="primary" class="titulo" [routerLink]="['/preguntas5']">
+      <ion-title>Crown and Anchor Society</ion-title>
+    </ion-item>
+    <ion-item color="primary" class="titulo" [routerLink]="['/preguntas6']">
+      <ion-title>Perfect Day at CocoCay</ion-title>
+    </ion-item>
+    <ion-item color="primary" class="titulo" [routerLink]="['/preguntas7']">
+      <ion-title>Equipaje y código de vestimenta</ion-title>
+    </ion-item>
+    <ion-item color="primary" class="titulo" [routerLink]="['/preguntas8']">
+      <ion-title>Paquetes de bebidas</ion-title>
+    </ion-item>
+    <ion-item color="primary" class="titulo" [routerLink]="['/preguntas9']">
+      <ion-title>Embarque y transporte</ion-title>
+    </ion-item>
+    <ion-item color="primary" class="titulo" [routerLink]="['/preguntas10']">
+      <ion-title>Internet a bordo</ion-title>
+    </ion-item>
+    <ion-item color="primary" class="titulo" [routerLink]="['/preguntas11']">
+      <ion-title>Ubicación de la terminal</ion-title>
+    </ion-item>
   </ion-content>
 </div>

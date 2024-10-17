@@ -1,20 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
+import { RouterLink } from '@angular/router';
+import { addIcons } from 'ionicons';
+import { book, walk, bed } from 'ionicons/icons';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-wonder-of-the-seas',
   templateUrl: './wonder-of-the-seas.page.html',
   styleUrls: ['./wonder-of-the-seas.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule, IonicModule, RouterLink]
 })
-export class WonderOfTheSeasPage implements OnInit {
+export class WonderOfTheSeasPage  {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(public menu: MenuController) { 
+    addIcons({ book, walk, bed });
+    this.menuActive();
   }
 
+  menuActive(){
+    this.menu.enable(true, 'menu');
+  }
 }

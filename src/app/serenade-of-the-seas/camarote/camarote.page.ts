@@ -1,20 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonicModule} from '@ionic/angular';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-camarote',
+  selector: 'app-serenade-camarote',
   templateUrl: './camarote.page.html',
   styleUrls: ['./camarote.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule, IonicModule, RouterLink]
 })
-export class CamarotePage implements OnInit {
+export class CamarotesSerenadePage  {
 
   constructor() { }
 
-  ngOnInit() {
-  }
 
 }

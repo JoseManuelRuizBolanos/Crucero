@@ -1,0 +1,30 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <div class="perfil">
+      <ion-avatar>
+        <img src="https://ionicframework.com/docs/img/demos/avatar.svg"/>
+      </ion-avatar>
+    </div>
+    <div class="align-center">
+      <ion-title>Nombre</ion-title>
+    </div>
+    <p></p>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Cruceros Reservados</ion-title>
+    </ion-item>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Cruceros Visitados</ion-title>
+    </ion-item>
+    <ion-item class="titulo" color="danger" button (click)="logout()">
+      <ion-title>Cerrar Sesión</ion-title>
+    </ion-item>
+  </ion-content>
+</div>

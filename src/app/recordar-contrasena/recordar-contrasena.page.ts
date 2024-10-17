@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-recordar-contrasena',
@@ -11,11 +12,17 @@ import { IonicModule } from '@ionic/angular';
   standalone: true,
   imports: [CommonModule, FormsModule, RouterLink, IonicModule]
 })
-export class RecordarContrasenaPage implements OnInit {
+export class RecordarContrasenaPage  {
+  email: any
+  constructor(public authService: AuthenticationService, public router: Router) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  async resetPassword(){
+      this.authService.resetPassword(this.email).then(() => {
+        console.log('reset link sent'),
+        this.router.navigate(['/login'])
+      }
+    ).catch((error) => {
+      console.log(error);
+    })
   }
-
 }

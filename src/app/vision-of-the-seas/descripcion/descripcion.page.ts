@@ -1,20 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonicModule} from '@ionic/angular';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-descripcion',
+  selector: 'app-vision-descripcion',
   templateUrl: './descripcion.page.html',
   styleUrls: ['./descripcion.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule, RouterLink, IonicModule]
 })
-export class DescripcionPage implements OnInit {
+export class DescripcionVisionPage  {
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

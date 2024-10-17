@@ -30,6 +30,10 @@ import { OasisOfTheSeasPage } from './oasis-of-the-seas/oasis-of-the-seas.page';
             path: 'reservar',
             loadChildren: () => import('./oasis-of-the-seas/reservar/reservar.page.module').then((m) => m.ReservarOasisPageModule),
           },
+         /*  {
+            path: 'login', 
+            loadChildren: () => import ('./login/login.page').then(m => m.LoginPage),
+          } */
         ],
       },
     ]),

@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
 import { addIcons } from 'ionicons';
-import { book, walk, bed, boat } from 'ionicons/icons';
+import { book, walk, bed } from 'ionicons/icons';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-oasis-of-the-seas',
@@ -15,8 +16,12 @@ import { book, walk, bed, boat } from 'ionicons/icons';
 })
 export class OasisOfTheSeasPage  {
 
-  constructor() { 
-    addIcons({ book, walk, bed, boat });
+  constructor(public menu: MenuController) { 
+    addIcons({ book, walk, bed });
+    this.menuActive();
   }
 
+  menuActive(){
+    this.menu.enable(true, 'menu');
+  }
 }

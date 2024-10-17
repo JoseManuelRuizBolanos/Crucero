@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
 import { addIcons } from 'ionicons';
 import { book, walk, bed, boat } from 'ionicons/icons';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-allure-of-the-seas',
@@ -15,7 +16,12 @@ import { book, walk, bed, boat } from 'ionicons/icons';
 })
 export class AllureOfTheSeasPage  {
 
-  constructor() { 
-    addIcons({ book, walk, bed, boat });
-  }  
+  constructor(public menu: MenuController) { 
+    addIcons({ book, walk, bed });
+    this.menuActive();
+  }
+
+  menuActive(){
+    this.menu.enable(true, 'menu');
+  }
 }

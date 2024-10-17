@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, Validators, ReactiveFormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
 import { AuthenticationService } from '../authentication.service';
@@ -17,7 +17,9 @@ import { AuthenticationService } from '../authentication.service';
 export class LoginPage implements OnInit{
   loginForm : FormGroup
 
-  constructor(public formBuilder:FormBuilder, public loadingController: LoadingController, public authService: AuthenticationService) {  }
+  constructor(
+    public formBuilder:FormBuilder, public loadingController: LoadingController, public authService: AuthenticationService, public router : Router
+  ) {  }
 
   ngOnInit(){
     this.loginForm = this.formBuilder.group({
@@ -41,9 +43,21 @@ export class LoginPage implements OnInit{
   const loading = await this.loadingController.create();
   await loading.present();
   if(this.loginForm?.valid){
-    //const user = await this.authService.registerUser(email, password)
+    const user = await this.authService.loginUser(this.loginForm.value.email, this.loginForm.value.password).catch((error) => {
+      console.log(error);
+      loading.dismiss()
+    })
+
+    if(user){
+      loading.dismiss()
+      this.router.navigate(['/pagina-principal'])
+
+    }else{
+      console.log('provide correct value');
+
+    }
+  }else{
+    alert('Datos no validos')
   }
  }
-  
-
 }

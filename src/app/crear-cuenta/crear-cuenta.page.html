@@ -10,27 +10,11 @@
   <p></p>
   <form [formGroup]="regForm" novalidate>
     <ion-input formControlName="fullname" class="custom" placeholder="Introduce tu nombre"></ion-input>
-    <div>
-      <ion-text> 
-        El nombre es obligatorio
-      </ion-text>
-    </div>
     <ion-input formControlName="email" class="custom" placeholder="Introduce tu correo"></ion-input>
-    <div>
-      <ion-text>
-        Emails is required
-      </ion-text>
-      <ion-text>
-        Email should be valid
-      </ion-text>
-    </div>
     <ion-input formControlName="password" class="custom" type="password" placeholder="Introduce tu contraseña">
       <ion-input-password-toggle slot="end"></ion-input-password-toggle>
     </ion-input>
     <div>
-      <ion-text>
-        Password is required
-      </ion-text>
       <ion-text>
         Password must atleast have
         One Character
@@ -40,7 +24,7 @@
       </ion-text>
     </div>
     <div class="align-center">
-      <ion-button class="ion-padding" [routerLink]="['/login']">Crear cuenta</ion-button>
+      <ion-button class="ion-padding" (click)="signUp()">Crear cuenta</ion-button>
     </div>
   </form>
 </ion-content>

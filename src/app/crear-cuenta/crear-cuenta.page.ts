@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
 import { AuthenticationService } from '../authentication.service';
@@ -16,7 +16,7 @@ import { AuthenticationService } from '../authentication.service';
 export class CrearCuentaPage implements OnInit {
   regForm: FormGroup;
 
-  constructor(public formBuilder:FormBuilder, public loadingController: LoadingController, public authService: AuthenticationService) { }
+  constructor(public formBuilder:FormBuilder, public loadingController: LoadingController, public authService: AuthenticationService, public router : Router) { }
     ngOnInit(){
       this.regForm = this.formBuilder.group({
           fullname: ['', [Validators.required]],
@@ -27,7 +27,7 @@ export class CrearCuentaPage implements OnInit {
           ]],
           password: ['', [
             Validators.required,
-            Validators.pattern("(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}")
+            Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$")
           ]]
       })
    }
@@ -40,7 +40,18 @@ export class CrearCuentaPage implements OnInit {
     const loading = await this.loadingController.create();
     await loading.present();
     if(this.regForm?.valid){
-      //const user = await this.authService.registerUser(email, password)
+      const user = await this.authService.registerUser(this.regForm.value.email, this.regForm.value.password)
+
+      if(user){
+        loading.dismiss()
+        this.router.navigate(['/login'])
+
+      }else{
+        console.log('provide correct value');
+
+      }
+    }else{
+      alert('Datos no validos')
     }
    }
 }

@@ -14,7 +14,7 @@
       <ion-input-password-toggle slot="end"></ion-input-password-toggle>
     </ion-input>
     <div class="align-center">
-      <ion-button class="ion-padding" [routerLink]="['/pagina-principal']">Iniciar Sesión</ion-button>
+      <ion-button class="ion-padding" (click)="signUp()">Iniciar Sesión</ion-button>
       <h4 class = "ion-padding" [routerLink]="['/crear-cuenta']" class="colorAzul">Crear una cuenta nueva</h4>
       <h4 class = "ion-padding" [routerLink]="['/recordar-contrasena']" class="colorAzul">¿Has olvidado tu contraseña?</h4>
     </div>

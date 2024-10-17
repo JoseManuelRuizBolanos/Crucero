@@ -8,11 +8,8 @@
     src ="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/RCI_Flag.svg/1200px-RCI_Flag.svg.png" style="width: 20%;" class="img">
   </ion-img>
   <p></p>
-  <ion-input class="custom" placeholder="Introduce tu usuario"></ion-input>
-  <ion-input class="custom" type="password" placeholder="Introduce tu nueva contraseña">
-    <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-  </ion-input>
+  <ion-input [(ngModel)]="email" class="custom" placeholder="Introduce tu correo"></ion-input>
   <div class="align-center">
-    <ion-button class="ion-padding" [routerLink]="['/login']">Cambiar Contraseña</ion-button>
+    <ion-button class="ion-padding" (click)="resetPassword()">Cambiar Contraseña</ion-button>
   </div>
 </ion-content>
