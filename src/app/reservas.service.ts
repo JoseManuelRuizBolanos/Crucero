@@ -10,14 +10,14 @@ export class ReservasService {
 
     async guardarReserva(fechaInicio: any, lugares: any, puertoSalida: any, noches: any, huespedes: any, nombreCamarote: any, numeroCamarotes: any, nombreCrucero: any) {
         const obj = Object.assign({
-            "FechaInicio" : fechaInicio,
-            "Lugares" : lugares,
-            "PuertoSalida" : puertoSalida,
-            "Noches" : noches,
-            "Huespedes" : huespedes,
-            "NombreCamarote" : nombreCamarote,
-            "NumeroCamarotes" : numeroCamarotes,
-            "NombreCrucero" : nombreCrucero
+            "fechaInicio" : fechaInicio,
+            "lugares" : lugares,
+            "puertoSalida" : puertoSalida,
+            "noches" : noches,
+            "huespedes" : huespedes,
+            "nombreCamarote" : nombreCamarote,
+            "numeroCamarotes" : numeroCamarotes,
+            "nombreCrucero" : nombreCrucero
         });
 
         const Ref = collection(this.firestore, 'Reservas');

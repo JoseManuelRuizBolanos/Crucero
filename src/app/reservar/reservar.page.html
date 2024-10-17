@@ -7,168 +7,132 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-item class="titulo" color="primary">
-    <ion-title>Fecha de Inicio del Crucero</ion-title>
-  </ion-item>
-  <ion-datetime-button class="fecha" datetime="datetime"></ion-datetime-button>
-  <ion-modal [keepContentsMounted]="true">
-    <ng-template>
-      <ion-datetime id="datetime"></ion-datetime>
-    </ng-template>
-  </ion-modal>
-  <ion-item class="titulo" color="primary">
-    <ion-title>Que lugares quieres visitar</ion-title>
-  </ion-item>
-  <ion-picker>
-    <ion-picker-column value="alaska">
-      <ion-picker-column-option value="alaska">Alaska</ion-picker-column-option>
-      <ion-picker-column-option value="asia">Asia</ion-picker-column-option>
-      <ion-picker-column-option value="australia&nuevazelanda">Australia y Nueva Zelanda</ion-picker-column-option>
-      <ion-picker-column-option value="canada&nuevainglaterra">Canada y Nueva Inglaterra</ion-picker-column-option>
-      <ion-picker-column-option value="canaldepanama">Canal de Panamá</ion-picker-column-option>
-      <ion-picker-column-option value="caribe">El Caribe</ion-picker-column-option>
-      <ion-picker-column-option value="europa">Europa</ion-picker-column-option>
-      <ion-picker-column-option value="hawai">Hawái</ion-picker-column-option>
-      <ion-picker-column-option value="bahamas">Las Bahamas</ion-picker-column-option>
-      <ion-picker-column-option value="mexico">México</ion-picker-column-option>
-      <ion-picker-column-option value="pacificonoroeste">Pacífico Noroeste</ion-picker-column-option>
-      <ion-picker-column-option value="pacificosur">Pacífico Sur</ion-picker-column-option>
-      <ion-picker-column-option value="transatlantico">Transatlántico</ion-picker-column-option>
-      <ion-picker-column-option value="transpacifico">Transpacífico</ion-picker-column-option>
-    </ion-picker-column>
-  </ion-picker>
-  <ion-item class="titulo" color="primary">
-    <ion-title>Escoge el puerto de salida</ion-title>
-  </ion-item>
-  <ion-accordion-group>
-    <ion-accordion value="europa">
-      <ion-item slot="header" color="light">
-        <ion-label>Europa</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Barcelona, España</div>
-      <div class="ion-padding" slot="content">Roma (Civitavecchia), Italia</div>
-      <div class="ion-padding" slot="content">Rávena (Venecia), Italia</div>
-      <div class="ion-padding" slot="content">Southampton, Inglaterra</div>
-    </ion-accordion>
-    <ion-accordion value="americanorte">
-      <ion-item slot="header" color="light">
-        <ion-label>América del Norte</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Baltimore, Maryland</div>
-      <div class="ion-padding" slot="content">Boston, Massachusetts</div>
-      <div class="ion-padding" slot="content">Cape Liberty (Nueva York), Nueva Jersey</div>
-      <div class="ion-padding" slot="content">Fort Lauderdale, Florida</div>
-      <div class="ion-padding" slot="content">Galveston, Texas</div>
-      <div class="ion-padding" slot="content">Los Ángeles, California</div>
-      <div class="ion-padding" slot="content">Miami, Florida</div>
-      <div class="ion-padding" slot="content">Nueva Orleans, Luisiana</div>
-      <div class="ion-padding" slot="content">Oahu (Honolulú), Hawái</div>
-      <div class="ion-padding" slot="content">Orlando (Puerto Cañaveral), Florida</div>
-      <div class="ion-padding" slot="content">Puerto de cruceros de Vancouver, (Columbia Británica)</div>
-      <div class="ion-padding" slot="content">San Diego, California</div>
-      <div class="ion-padding" slot="content">Seattle, Washington</div>
-      <div class="ion-padding" slot="content">Seward, Alaska</div>
-      <div class="ion-padding" slot="content">Tampa, Florida</div>
-    </ion-accordion>
-    <ion-accordion value="asia&pacifico">
-      <ion-item slot="header" color="light">
-        <ion-label>Asia y El Pacífico</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Hong Kong, China</div>
-      <div class="ion-padding" slot="content">Pekín (Tianjin), China</div>
-      <div class="ion-padding" slot="content">Shanghái (Baoshán), China</div>
-      <div class="ion-padding" slot="content">Singapur, Singapur</div>
-      <div class="ion-padding" slot="content">Tokio (Yokohama), Japón</div>
-    </ion-accordion>
-    <ion-accordion value="americalatina&caribe">
-      <ion-item slot="header" color="light">
-        <ion-label>América Latina y El Caribe</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Cartagena, Colombia</div>
-      <div class="ion-padding" slot="content">Colón, Panamá</div>
-      <div class="ion-padding" slot="content">San Juan, Puerto Rico</div>
-    </ion-accordion>
-    <ion-accordion value="australia">
-      <ion-item slot="header" color="light">
-        <ion-label>Australia</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Brisbane, Australia</div>
-      <div class="ion-padding" slot="content">Sídney, Australia</div>
-    </ion-accordion>
-  </ion-accordion-group>
-  <ion-item class="titulo" color="primary">
-    <ion-title>Cantidad de noches</ion-title>
-  </ion-item>
-  <ion-item>
-    <ion-input label="Cantidad de noches"></ion-input>
-  </ion-item>
-  <ion-item class="titulo" color="primary">
-    <ion-title>Número de huéspedes</ion-title>
-  </ion-item>
-  <ion-item>
-    <ion-input label="Número de huéspedes"></ion-input>
-  </ion-item>
-  <div style="text-align: center">Cada 4 huéspedes puedes pedir otro camarote</div>
-  <ion-item class="titulo" color="primary">
-    <ion-title>Camarotes</ion-title>
-  </ion-item>
-  <ion-item>
-    <ion-input label="Camarotes Interiores" value="0"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input label="Vista al Océano" value="0"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input label="Camarotes con Balcón" value="0"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input label="Sunset Corner Suite" value="0"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input label="Panoramic Suite" value="0"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input label="Infinity Balconies" value="0"></ion-input>
-  </ion-item>
-  <div style="text-align: center">0 = no quiero este camarote</div>
-  <div style="text-align: center">1 o más el número de camarotes que quieres de ese tipo</div>
-  <ion-item class="titulo" color="primary">
-    <ion-title>Nuestra Flota</ion-title>
-  </ion-item>
-  <ion-picker>
-    <ion-picker-column value="adventure-of-the-seas">
-      <ion-picker-column-option value="adventure-of-the-seas">Adventure of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="allure-of-the-seas">Allure of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="anthem-of-the-seas">Anthem of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="brilliance-of-the-seas">Brilliance of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="enchantment-of-the-seas">Enchantment of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="explorer-of-the-seas">Explorer of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="freedom-of-the-seas">Freedom of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="grandeur-of-the-seas">Grandeur of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="harmony-of-the-seas">Harmony of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="icon-of-the-seas">Icon of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="independence-of-the-seas">Independence of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="jewel-of-the-seas">Jewel of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="liberty-of-the-seas">Liberty of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="mariner-of-the-seas">Mariner of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="navigator-of-the-seas">Navigator of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="oasis-of-the-seas">Oasis of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="odyssey-of-the-seas">Odyssey of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="ovation-of-the-seas">Ovation of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="quantum-of-the-seas">Quantum of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="radiance-of-the-seas">Radiance of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="rhapsody-of-the-seas">Rhapsody of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="serenade-of-the-seas">Serenade of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="spectrum-of-the-seas">Spectrum of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="star-of-the-seas">Star of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="symphony-of-the-seas">Symphony of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="utopia-of-the-seas">Utopia of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="vision-of-the-seas">Vision of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="voyager-of-the-seas">Voyager of the Seas</ion-picker-column-option>
-      <ion-picker-column-option value="wonder-of-the-seas">Wonder of the Seas</ion-picker-column-option>
-    </ion-picker-column>
-  </ion-picker>
-  <div class="boton">
-    <ion-button >Reservar</ion-button>
-  </div>
+  <form [formGroup]="reservaForm" (ngSubmit)="onSubmit()">
+    <ion-item class="titulo" color="primary">
+      <ion-title>Fecha de Inicio del Crucero</ion-title>
+    </ion-item>
+    <ion-datetime-button class="fecha" datetime="datetime" name="fechaInicio" formName="fechaInicio"></ion-datetime-button>
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="datetime"></ion-datetime>
+      </ng-template>
+    </ion-modal>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Lugares para visitar</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Lugares para visitar:" placeholder="Que lugares quieres visitar" name="lugares" formControlName="lugares">
+        <ion-select-option value="alaska">Alaska</ion-select-option>
+        <ion-select-option value="asia">Asia</ion-select-option>
+        <ion-select-option value="australia&nuevazelanda">Australia y Nueva Zelanda</ion-select-option>
+        <ion-select-option value="canada&nuevainglaterra">Canada y Nueva Inglaterra</ion-select-option>
+        <ion-select-option value="canaldepanama">Canal de Panamá</ion-select-option>
+        <ion-select-option value="caribe">El Caribe</ion-select-option>
+        <ion-select-option value="europa">Europa</ion-select-option>
+        <ion-select-option value="hawai">Hawái</ion-select-option>
+        <ion-select-option value="bahamas">Las Bahamas</ion-select-option>
+        <ion-select-option value="mexico">México</ion-select-option>
+        <ion-select-option value="pacificonoroeste">Pacífico Noroeste</ion-select-option>
+        <ion-select-option value="pacificosur">Pacífico Sur</ion-select-option>
+        <ion-select-option value="transatlantico">Transatlántico</ion-select-option>
+        <ion-select-option value="transpacifico">Transpacífico</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Escoge el puerto de salida</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Puerto de Salida:" placeholder="Escoge el puerto de salida" name="puertoSalida" formControlName="puertoSalida">
+        <ion-select-option value="barcelona">Barcelona, España</ion-select-option>
+        <ion-select-option value="roma">Roma (Civitavecchia), Italia</ion-select-option>
+        <ion-select-option value="ravena">Rávena (Venecia), Italia</ion-select-option>
+        <ion-select-option value="southampton">Southampton, Inglaterra</ion-select-option>
+        <ion-select-option value="baltimore">Baltimore, Maryland</ion-select-option>
+        <ion-select-option value="boston">Boston, Massachusetts</ion-select-option>
+        <ion-select-option value="capeLiberty">Cape Liberty (Nueva York), Nueva Jersey</ion-select-option>
+        <ion-select-option value="fortLauderdale">Fort Lauderdale, Florida</ion-select-option>
+        <ion-select-option value="galveston">Galveston, Texas</ion-select-option>
+        <ion-select-option value="losAngeles">Los Ángeles, California</ion-select-option>
+        <ion-select-option value="miami">Miami, Florida</ion-select-option>
+        <ion-select-option value="nuevaOrleans">Nueva Orleans, Luisiana</ion-select-option>
+        <ion-select-option value="oahu">Oahu (Honolulú), Hawái</ion-select-option>
+        <ion-select-option value="orlando">Orlando (Puerto Cañaveral), Florida</ion-select-option>
+        <ion-select-option value="vancouver">Puerto de cruceros de Vancouver, (Columbia Británica)</ion-select-option>
+        <ion-select-option value="sanDiego">San Diego, California</ion-select-option>
+        <ion-select-option value="seattle">Seattle, Washington</ion-select-option>
+        <ion-select-option value="seward">Seward, Alaska</ion-select-option>
+        <ion-select-option value="tampa">Tampa, Florida</ion-select-option>
+        <ion-select-option value="cartagena">Cartagena, Colombia</ion-select-option>
+        <ion-select-option value="colon">Colón, Panamá</ion-select-option>
+        <ion-select-option value="sanJuan">San Juan, Puerto Rico</ion-select-option>
+        <ion-select-option value="brisbane">Brisbane, Australia</ion-select-option>
+        <ion-select-option value="sidney">Sídney, Australia</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Cantidad de noches</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Número de huéspedes:" placeholder="Escoge el número de huéspedes" name="huespedes" formName="huespedes"></ion-input>
+    </ion-item>
+    <div style="text-align: center">Cada 4 huéspedes puedes pedir otro camarote</div>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Camarotes</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Camarote:" placeholder="Escoge un camarote" name="nombreCamarote" formName="nombreCamarote">
+        <ion-select-option value="camarotesInteriores">Camarotes Interiores</ion-select-option>
+        <ion-select-option value="vistaOceano">Vista al Océano</ion-select-option>
+        <ion-select-option value="camaroteBalcon">Camarotes con Balcón</ion-select-option>
+        <ion-select-option value="sunsetCornerSuite">Sunser Corner Suite</ion-select-option>
+        <ion-select-option value="panoramicSuite">Panoramic Suite</ion-select-option>
+        <ion-select-option value="infinityBalconies">Infinity Balconies</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Número de Camarotes</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Número de camarotes:" placeholder="Escoge el número de camarotes" name="numeroCamarotes" formName="numeroCamarotes"></ion-input>
+    </ion-item>
+    <ion-item class="titulo" color="primary">
+      <ion-title>Nuestra Flota</ion-title>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Crucero:" placeholder="Escoge un crucero" name="nombreCrucero" formName="nombreCrucero">
+        <ion-select-option value="adventure-of-the-seas">Adventure of the Seas</ion-select-option>
+        <ion-select-option value="allure-of-the-seas">Allure of the Seas</ion-select-option>
+        <ion-select-option value="anthem-of-the-seas">Anthem of the Seas</ion-select-option>
+        <ion-select-option value="brilliance-of-the-seas">Brilliance of the Seas</ion-select-option>
+        <ion-select-option value="enchantment-of-the-seas">Enchantment of the Seas</ion-select-option>
+        <ion-select-option value="explorer-of-the-seas">Explorer of the Seas</ion-select-option>
+        <ion-select-option value="freedom-of-the-seas">Freedom of the Seas</ion-select-option>
+        <ion-select-option value="grandeur-of-the-seas">Grandeur of the Seas</ion-select-option>
+        <ion-select-option value="harmony-of-the-seas">Harmony of the Seas</ion-select-option>
+        <ion-select-option value="icon-of-the-seas">Icon of the Seas</ion-select-option>
+        <ion-select-option value="independence-of-the-seas">Independence of the Seas</ion-select-option>
+        <ion-select-option value="jewel-of-the-seas">Jewel of the Seas</ion-select-option>
+        <ion-select-option value="liberty-of-the-seas">Liberty of the Seas</ion-select-option>
+        <ion-select-option value="mariner-of-the-seas">Mariner of the Seas</ion-select-option>
+        <ion-select-option value="navigator-of-the-seas">Navigator of the Seas</ion-select-option>
+        <ion-select-option value="oasis-of-the-seas">Oasis of the Seas</ion-select-option>
+        <ion-select-option value="odyssey-of-the-seas">Odyssey of the Seas</ion-select-option>
+        <ion-select-option value="ovation-of-the-seas">Ovation of the Seas</ion-select-option>
+        <ion-select-option value="quantum-of-the-seas">Quantum of the Seas</ion-select-option>
+        <ion-select-option value="radiance-of-the-seas">Radiance of the Seas</ion-select-option>
+        <ion-select-option value="rhapsody-of-the-seas">Rhapsody of the Seas</ion-select-option>
+        <ion-select-option value="serenade-of-the-seas">Serenade of the Seas</ion-select-option>
+        <ion-select-option value="spectrum-of-the-seas">Spectrum of the Seas</ion-select-option>
+        <ion-select-option value="star-of-the-seas">Star of the Seas</ion-select-option>
+        <ion-select-option value="symphony-of-the-seas">Symphony of the Seas</ion-select-option>
+        <ion-select-option value="utopia-of-the-seas">Utopia of the Seas</ion-select-option>
+        <ion-select-option value="vision-of-the-seas">Vision of the Seas</ion-select-option>
+        <ion-select-option value="voyager-of-the-seas">Voyager of the Seas</ion-select-option>
+        <ion-select-option value="wonder-of-the-seas">Wonder of the Seas</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div class="boton">
+      <ion-button type="submit">Reservar</ion-button>
+    </div>
+  </form>
 </ion-content>
