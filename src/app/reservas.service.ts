@@ -6,7 +6,7 @@ import { addDoc, collection } from "firebase/firestore";
     providedIn: 'root'
 })
 export class ReservasService {
-    constructor(private firestore: Firestore) { }
+    constructor(private firestore: Firestore) {  }
 
     async guardarReserva(fechaInicio: any, lugares: any, puertoSalida: any, noches: any, huespedes: any, nombreCamarote: any, numeroCamarotes: any, nombreCrucero: any) {
         const obj = Object.assign({
@@ -23,5 +23,7 @@ export class ReservasService {
         const Ref = collection(this.firestore, 'Reservas');
 
         await addDoc(Ref, obj);
+
+        await onsubmit(this.reservaService.guardarReserva(datos));
     }
 }

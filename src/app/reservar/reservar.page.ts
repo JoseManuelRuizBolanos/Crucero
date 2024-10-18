@@ -24,24 +24,18 @@ export class ReservarPage  {
     numeroCamarotes: new FormControl("", Validators.required),
     nombreCrucero: new FormControl("", Validators.required)
   })
-  fechaInicio: string;
-  lugares: string;
-  puertaSalida: string;
-  noches: string;
-  huespedes: string;
-  nombreCamarote: string;
-  numeroCamarotes: string;
-  nombreCrucero: string;
+  
+  fechaInicio: any;
+  lugares: any;
+  puertaSalida: any;
+  noches: any;
+  huespedes: any;
+  nombreCamarote: any;
+  numeroCamarotes: any;
+  nombreCrucero: any;
 
   async onSubmit(){
-    this.fechaInicio = this.reservaForm.value.fechaInicio
-    this.lugares = this.reservaForm.value.lugares
-    this.puertaSalida = this.reservaForm.value.puertoSalida
-    this.noches = this.reservaForm.value.noches
-    this.huespedes = this.reservaForm.value.huespedes
-    this.nombreCamarote = this.reservaForm.value.nombreCamarote
-    this.numeroCamarotes = this.reservaForm.value.numeroCamarotes
-    this.nombreCrucero = this.reservaForm.value.nombreCrucero
+    const datos = this.reservaForm.value
   }
   
   constructor(public menu: MenuController) { 
