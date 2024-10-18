@@ -4,6 +4,7 @@ import { FormControl, FormGroup, FormsModule, Validators, ReactiveFormsModule } 
 import { IonicModule } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { ReservasService } from '../reservas.service';
 
 @Component({
   selector: 'app-reservar',
@@ -24,21 +25,21 @@ export class ReservarPage  {
     numeroCamarotes: new FormControl("", Validators.required),
     nombreCrucero: new FormControl("", Validators.required)
   })
-  
-  fechaInicio: any;
-  lugares: any;
-  puertaSalida: any;
-  noches: any;
-  huespedes: any;
-  nombreCamarote: any;
-  numeroCamarotes: any;
-  nombreCrucero: any;
 
   async onSubmit(){
     const datos = this.reservaForm.value
+    await this.reservasService.guardarReserva(
+      this.reservaForm.value.fechaInicio, 
+      this.reservaForm.value.lugares, 
+      this.reservaForm.value.puertoSalida,
+      this.reservaForm.value.noches, 
+      this.reservaForm.value.huespedes, 
+      this.reservaForm.value.nombreCamarote, 
+      this.reservaForm.value.numeroCamarotes, 
+      this.reservaForm.value.nombreCrucero)
   }
   
-  constructor(public menu: MenuController) { 
+  constructor(public menu: MenuController, public reservasService: ReservasService) { 
     this.menuActive();
   }
 

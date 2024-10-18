@@ -3,7 +3,6 @@ import { Auth } from '@angular/fire/auth';
 import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { User } from 'firebase/auth';
 
-
 @Injectable({
   providedIn: 'root',
 })

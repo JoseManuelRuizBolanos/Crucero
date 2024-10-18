@@ -13,7 +13,6 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { provideHttpClient } from '@angular/common/http';
 
-
 @NgModule({
     imports: [BrowserModule, FormsModule, AppRoutingModule, IonicModule.forRoot({}), 
     ],
