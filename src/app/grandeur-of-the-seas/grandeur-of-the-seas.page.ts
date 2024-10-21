@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
 import { addIcons } from 'ionicons';
-import { book, walk, bed } from 'ionicons/icons';
+import { book, walk, bed, trophy } from 'ionicons/icons';
 import { MenuController } from '@ionic/angular';
 
 @Component({
@@ -17,7 +17,7 @@ import { MenuController } from '@ionic/angular';
 export class GrandeurOfTheSeasPage  {
 
   constructor(public menu: MenuController) { 
-    addIcons({ book, walk, bed });
+    addIcons({ book, walk, bed, trophy });
     this.menuActive();
   }
 

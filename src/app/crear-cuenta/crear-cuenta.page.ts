@@ -52,6 +52,7 @@ export class CrearCuentaPage implements OnInit {
       }
     }else{
       alert('Datos no validos')
+      loading.dismiss()
     }
    }
 }

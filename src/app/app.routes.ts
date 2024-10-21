@@ -781,5 +781,9 @@ export const routes: Routes = [
   {
     path: 'preguntas11',
     loadComponent: () => import('./preguntas-frecuentes/preguntas11/preguntas11.page').then( m => m.Preguntas11Page)
+  },
+  {
+    path: 'preguntas12',
+    loadComponent: () => import('./preguntas-frecuentes/preguntas12/preguntas12.page').then( m => m.Preguntas12Page)
   }
 ];

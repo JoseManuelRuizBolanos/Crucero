@@ -3,21 +3,18 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
-import { addIcons } from 'ionicons';
-import { book, walk, bed, trophy } from 'ionicons/icons';
 import { MenuController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-symphony-of-the-seas',
-  templateUrl: './symphony-of-the-seas.page.html',
-  styleUrls: ['./symphony-of-the-seas.page.scss'],
+  selector: 'app-preguntas12',
+  templateUrl: './preguntas12.page.html',
+  styleUrls: ['./preguntas12.page.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, RouterLink]
+  imports: [CommonModule, FormsModule, RouterLink, IonicModule ]
 })
-export class SymphonyOfTheSeasPage  {
-
+export class Preguntas12Page  {
+  alertButtons = ['Aceptar'];
   constructor(public menu: MenuController) { 
-    addIcons({ book, walk, bed, trophy });
     this.menuActive();
   }
 

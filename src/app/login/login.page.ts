@@ -58,6 +58,7 @@ export class LoginPage implements OnInit{
     }
   }else{
     alert('Datos no validos')
+    loading.dismiss()
   }
  }
 }

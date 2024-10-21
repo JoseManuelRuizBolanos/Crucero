@@ -1,16 +1,15 @@
-import { Injectable } from "@angular/core";
-import { Firestore } from "@angular/fire/firestore";
-import { addDoc, collection } from "firebase/firestore";
+import { inject, Injectable } from "@angular/core";
+import { addDoc, collection, Firestore } from "@angular/fire/firestore";
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: 'root',
 })
 export class ReservasService {
-    private firestore: Firestore
-    constructor() {  }
+    private firestore = inject(Firestore);
+    constructor( ) {  }
 
     async guardarReserva(fechaInicio: any, lugares: any, puertoSalida: any, noches: any, huespedes: any, nombreCamarote: any, numeroCamarotes: any, nombreCrucero: any) {
-        const obj = Object.assign({
+        const obj ={
             "fechaInicio" : fechaInicio,
             "lugares" : lugares,
             "puertoSalida" : puertoSalida,
@@ -19,7 +18,7 @@ export class ReservasService {
             "nombreCamarote" : nombreCamarote,
             "numeroCamarotes" : numeroCamarotes,
             "nombreCrucero" : nombreCrucero
-        });
+        };
 
         const Ref = collection(this.firestore, 'Reservas');
 
