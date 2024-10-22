@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { ReservasService } from '../reservas.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-reservar',
@@ -323,7 +324,7 @@ export class ReservarPage  {
   }
 
   reservaForm = new FormGroup({
-    fechaInicio: new FormControl("", [Validators.required]),
+    fechaInicio: new FormControl("", Validators.required),
     lugares: new FormControl("", [Validators.required]),
     puertoSalida: new FormControl("", [Validators.required]),
     noches: new FormControl("", [Validators.required]),
@@ -345,8 +346,18 @@ export class ReservarPage  {
       this.reservaForm.value.numeroCamarotes, 
       this.reservaForm.value.nombreCrucero)
   }
+
+  async alertaReserva() {
+    const alert = await this.alertController.create({
+      header: '¡Crucero Reservado Con Éxito!',
+      message: 'Si quieres ver o cancelar tus reservas, lo puedes hacer desde tu perfil',
+      buttons: ['Action'],
+    });
+
+    await alert.present();
+  }
   
-  constructor(public menu: MenuController, public reservasService: ReservasService) { 
+  constructor(public menu: MenuController, public reservasService: ReservasService, private alertController: AlertController) { 
     this.menuActive();
   }
 
