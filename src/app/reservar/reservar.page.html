@@ -12,7 +12,7 @@
       <ion-title>Nuestra Flota</ion-title>
     </ion-item>
     <ion-item>
-      <ion-select label="Crucero:" placeholder="Escoge un crucero" name="nombreCrucero" formControlName="nombreCrucero" [compareWith]="compareFn">
+      <ion-select label="Crucero:" placeholder="Escoge un crucero" name="nombreCrucero" formControlName="nombreCrucero" [compareWith]="compareFn" (ionChange)="onCruceroChange()">
         <ion-select-option *ngFor="let crucero of cruceros" [value]="crucero" type="text">{{ crucero.name }}</ion-select-option>
       </ion-select>
     </ion-item>
@@ -30,7 +30,7 @@
     <ion-item>
       <ion-select label="Puerto de Salida:" placeholder="Escoge el puerto de salida" name="puertoSalida" formControlName="puertoSalida" [compareWith]="compareFn">
         <ion-select-option *ngFor="let puerto of puertos" [value]="puerto" type="text">{{ puerto.name }}</ion-select-option>
-      </ion-select>
+      </ion-select>   
     </ion-item>
     <ion-item class="titulo" color="primary">
       <ion-title>Cantidad de noches</ion-title>
@@ -42,7 +42,7 @@
       <ion-title>Cantidad de huéspedes</ion-title>
     </ion-item>
     <ion-item>
-      <ion-input label="Número de huéspedes:" placeholder="Escoge el número de huéspedes" name="huespedes" formControlName="huespedes" type="number"></ion-input>
+      <ion-input label="Número de huéspedes:" placeholder="Escoge el número de huéspedes" name="huespedes" formControlName="huespedes" type="number" (ionInput)="calcularCamarotes()"></ion-input>
     </ion-item>
     <div style="text-align: center">Cada 4 huéspedes se te añade otro camarote</div>
     <ion-item class="titulo" color="primary">
@@ -57,7 +57,7 @@
       <ion-title>Número de Camarotes</ion-title>
     </ion-item>
     <ion-item>
-      <ion-input label="Número de camarotes:" placeholder="Escoge el número de camarotes" name="numeroCamarotes" formControlName="numeroCamarotes"></ion-input>
+      <ion-input label="Número de camarotes:" placeholder="Escoge el número de camarotes" name="numeroCamarotes" formControlName="numeroCamarotes" [value]="reservaForm.value.numeroCamarotes" readonly></ion-input>
     </ion-item>
     <ion-item class="titulo" color="primary">
       <ion-title>Fecha de Inicio del Crucero</ion-title>

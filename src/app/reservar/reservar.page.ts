@@ -319,8 +319,190 @@ export class ReservarPage  {
     },
   ]
 
+  lugaresOasis = [
+    { id: 2, name: 'Asia' },
+    { id: 10, name: 'México' }
+  ];
+  
+  puertosOasis = [
+    { id: 2, name: 'Roma (Civitavecchia), Italia' },
+    { id: 9, name: 'Galveston, Texas' }
+  ];
+
+  onCruceroChange() {
+    const cruceroSeleccionado = this.reservaForm.value.nombreCrucero;
+  
+    if (cruceroSeleccionado && cruceroSeleccionado.name === 'Oasis of the Seas') {
+      this.lugares = this.lugaresOasis;
+      this.puertos = this.puertosOasis;
+    } else {
+      this.lugares = [
+        {
+          id: 1,
+          name: 'Alaska'
+        },
+        {
+          id: 2,
+          name: 'Asia'
+        },
+        {
+          id: 3,
+          name: 'Australia y Nueva Zelanda'
+        },
+        {
+          id: 4,
+          name: 'Canada y Nueva Inglaterra'
+        },
+        {
+          id: 5,
+          name: 'Canal de Panamá'
+        },
+        {
+          id: 6,
+          name: 'El Caribe'
+        },
+        {
+          id: 7,
+          name: 'Europa'
+        },
+        {
+          id: 8,
+          name: 'Hawái'
+        },
+        {
+          id: 9,
+          name: 'Las Bahamas'
+        },
+        {
+          id: 10,
+          name: 'México'
+        },
+        {
+          id: 11,
+          name: 'Pacífico Noroeste'
+        },
+        {
+          id: 12,
+          name: 'Pacífico Sur'
+        },
+        {
+          id: 13,
+          name: 'Transatlántico'
+        },
+        {
+          id: 14,
+          name: 'Transpacífico'
+        }
+      ];
+      this.puertos = [
+        {
+          id: 1,
+          name: 'Barcelona, España'
+        },
+        {
+          id: 2,
+          name: 'Roma (Civitavecchia), Italia'
+        },
+        {
+          id: 3,
+          name: 'Rávena (Venecia), Italia'
+        },
+        {
+          id: 4,
+          name: 'Southampton, Inglaterra'
+        },
+        {
+          id: 5,
+          name: 'Baltimore, Maryland'
+        },
+        {
+          id: 6,
+          name: 'Boston, Massachusetts'
+        },
+        {
+          id: 7,
+          name: 'Cape Liberty (Nueva York), Nueva Jersey'
+        },
+        {
+          id: 8,
+          name: 'Fort Lauderdale, Florida'
+        },
+        {
+          id: 9,
+          name: 'Galveston, Texas'
+        },
+        {
+          id: 10,
+          name: 'Los Ángeles, California'
+        },
+        {
+          id: 11,
+          name: 'Miami, Florida'
+        },
+        {
+          id: 12,
+          name: 'Nueva Orleans, Luisiana'
+        },
+        {
+          id: 13,
+          name: 'Oahu (Honolulú), Hawái'
+        },
+        {
+          id: 14,
+          name: 'Orlando (Puerto Cañaveral), Florida'
+        },
+        {
+          id: 15,
+          name: 'Puerto de cruceros de Vancouver, (Columbia Británica)'
+        },
+        {
+          id: 16,
+          name: 'San Diego, California'
+        },
+        {
+          id: 17,
+          name: 'Seattle, Washington'
+        },
+        {
+          id: 18,
+          name: 'Seward, Alaska'
+        },
+        {
+          id: 19,
+          name: 'Tampa, Florida'
+        },
+        {
+          id: 20,
+          name: 'Cartagena, Colombia'
+        },
+        {
+          id: 21,
+          name: 'Colón, Panamá'
+        },
+        {
+          id: 22,
+          name: 'San Juan, Puerto Rico'
+        },
+        {
+          id: 23,
+          name: 'Brisbane, Australia'
+        },
+        {
+          id: 24,
+          name: 'Sídney, Australia'
+        }
+      ];
+    }
+  }
+
   compareFn(o1, o2) {
     return o1 && o2 ? o1.id === o2.id : o1 === o2;
+  }
+
+  calcularCamarotes() {
+    const huespedes = this.reservaForm.value.huespedes || 0;
+    const numeroCamarotes = Math.ceil(Number(huespedes) / 4).toString();
+    this.reservaForm.patchValue({ numeroCamarotes });
   }
 
   reservaForm = new FormGroup({
@@ -330,8 +512,8 @@ export class ReservarPage  {
     noches: new FormControl("", [Validators.required]),
     huespedes: new FormControl("", [Validators.required]),
     nombreCamarote: new FormControl("", [Validators.required]),
-    numeroCamarotes: new FormControl("", [Validators.required]),
-    nombreCrucero: new FormControl("", [Validators.required])
+    numeroCamarotes: new FormControl("1", [Validators.required]),
+    nombreCrucero: new FormControl(null, [Validators.required])
   })
 
   async onSubmit(){
@@ -359,6 +541,8 @@ export class ReservarPage  {
   
   constructor(public menu: MenuController, public reservasService: ReservasService, private alertController: AlertController) { 
     this.menuActive();
+    this.lugares = this.lugares;
+    this.puertos = this.puertos;
   }
 
   menuActive(){
